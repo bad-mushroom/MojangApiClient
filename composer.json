@@ -1,0 +1,42 @@
+{
+    "name": "badmushroom/mojangapiclient",
+    "description": "A simple PHP client for the Mojang Public API",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/bad-mushroom/mojangapiclient/issues",
+        "source": "https://github.com/bad-mushroom/mojangapiclient"
+    },
+    "keywords": [
+        "minecraft",
+        "mojang",
+        "api-client"
+    ],
+    "authors": [
+        {
+            "name": "Chris Sprague",
+            "email": "chris@chaoscontrol.org",
+            "homepage": "https://chaoscontrol.org",
+            "role": "Blockhead"
+        }
+    ],
+    "type": "library",
+    "readme": "README.md",
+    "autoload": {
+        "psr-4": {
+            "BadMushroom\\MojangApiClient\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=8.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BadMushroom\\MojangApiClient\\MojangApiClientServiceProvider"
+            ],
+            "aliases": {
+                "Mojang": "BadMushroom\\MojangApiClient\\Facades\\Mojang"
+            }
+        }
+    }
+}
